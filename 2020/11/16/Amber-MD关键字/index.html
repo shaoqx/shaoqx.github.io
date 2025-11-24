@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Amber MD关键字 - NOTES and REFS</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="NOTES and REFS"><meta name="msapplication-TileImage" content="/img/avatar.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="NOTES and REFS"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="之前了解了一遍Amber动力学输入文件中关键字的含义，但是几个月不用再一看又不熟悉了。为此做一个方便快速检索参考的中文笔记。"><meta property="og:type" content="blog"><meta property="og:title" content="Amber MD关键字"><meta property="og:url" content="http://yoursite.com/2020/11/16/Amber-MD%E5%85%B3%E9%94%AE%E5%AD%97/"><meta property="og:site_name" content="NOTES and REFS"><meta property="og:description" content="之前了解了一遍Amber动力学输入文件中关键字的含义，但是几个月不用再一看又不熟悉了。为此做一个方便快速检索参考的中文笔记。"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/images/iwarp.png"><meta property="article:published_time" content="2020-11-16T23:41:26.000Z"><meta property="article:modified_time" content="2025-11-24T22:16:36.737Z"><meta property="article:author" content="shaoqz"><meta property="article:tag" content="chinese"><meta property="article:tag" content="Amber"><meta property="article:tag" content="MD"><meta property="article:tag" content="MMPBSA"><meta property="article:tag" content="MCPB"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/iwarp.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2020/11/16/Amber-MD%E5%85%B3%E9%94%AE%E5%AD%97/"},"headline":"NOTES and REFS","image":["http://yoursite.com/images/iwarp.png"],"datePublished":"2020-11-16T23:41:26.000Z","dateModified":"2025-11-24T22:16:36.737Z","author":{"@type":"Person","name":"shaoqz"},"description":"之前了解了一遍Amber动力学输入文件中关键字的含义，但是几个月不用再一看又不熟悉了。为此做一个方便快速检索参考的中文笔记。"}</script><link rel="canonical" href="http://yoursite.com/2020/11/16/Amber-MD%E5%85%B3%E9%94%AE%E5%AD%97/"><link rel="icon" href="/img/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.0.2"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">SHAOQZ.CN</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/ref-rank">Paper Ranking</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/shaoqx"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-11-16T23:41:26.000Z" title="2020-11-16T23:41:26.000Z">2020-11-16</time></span><span class="level-item">Updated&nbsp;<time dateTime="2025-11-24T22:16:36.737Z" title="2025-11-24T22:16:36.737Z">2025-11-24</time></span><span class="level-item"><a class="link-muted" href="/categories/Notes/">Notes</a><span> / </span><a class="link-muted" href="/categories/Notes/Tools/">Tools</a></span><span class="level-item">an hour read (About 8675 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Amber MD关键字</h1><div class="content"><p>之前了解了一遍Amber动力学输入文件中关键字的含义，但是几个月不用再一看又不熟悉了。为此做一个方便快速检索参考的中文笔记。</p>
+<a id="more"></a>
+<hr>
+<h1 id="MD模拟"><a href="#MD模拟" class="headerlink" title="MD模拟"></a>MD模拟</h1><hr>
+<h2 id="输入关键字"><a href="#输入关键字" class="headerlink" title="输入关键字"></a>输入关键字</h2><p>这是我使用的production步的输入文件</p>
+<figure class="highlight plain"><figcaption><span>prod.in</span></figcaption><table><tr><td class="code"><pre><span class="line">Equilibration:constant pressure</span><br><span class="line"> &amp;cntrl</span><br><span class="line">  imin  &#x3D; 0, ntx &#x3D; 5, irest &#x3D; 1,    # 工作类型、读取设置</span><br><span class="line">  ntf   &#x3D; 2,  ntc &#x3D; 2,              # SHAKE束缚</span><br><span class="line">  nstlim&#x3D; 50000000, dt&#x3D; 0.002,      # 模拟时长</span><br><span class="line">  cut   &#x3D; 10.0,                     # 截断</span><br><span class="line">  temp0 &#x3D; 300.0,                    # 温度</span><br><span class="line">  ntt   &#x3D; 3, gamma_ln &#x3D; 5.0,        # 温度控制</span><br><span class="line">  ntb   &#x3D; 2,  ntp &#x3D; 1,              # 周期性边界的类型，系综</span><br><span class="line">  ntpr  &#x3D; 25000, ntwx &#x3D; 5000,       # 输出：写入频率</span><br><span class="line">  iwrap &#x3D; 1,                        # 输出：坐标居中</span><br><span class="line">  ig    &#x3D; -1,                       # 随机化</span><br><span class="line"> &#x2F;</span><br></pre></td></tr></table></figure>
+<p><font color=pink size=2>其中功能相关的设置被放置在相近的位置</font></p>
+<ul>
+<li><strong>imin</strong><br>选择任务类型<br><code>1</code>（最小化）<br><code>2</code>（MD）<br><code>5</code>（读取轨线进行再次计算）</li>
+<li><strong>ntx</strong><br>坐标（-c指定）读取方式<br><code>1</code>（仅读取笛卡尔坐标）<br><code>5</code>（读取坐标和速度以进行重启）</li>
+<li><strong>irest</strong><br>读取rst文件（-c指定）的行为<br><code>0</code> （不重启模拟，不读取速度，时间设置为0，开始新的模拟）<br><code>1</code> （重启模拟，从rst文件中读取坐标和速度，时间继续，不开始新的模拟）</li>
+</ul>
+<ul>
+<li><strong>ntpr</strong><br>out和mdinfo文件的写入频率<br>每<code>ntpr</code>步写入一次，默认为50</li>
+<li><strong>ntwx</strong><br>轨线文件的写入频率<br>每<code>ntwx</code>步写入一次，默认是0（不写入）</li>
+<li><strong>ntwr</strong><br>rst文件的更新频率，减少任务崩溃的损失<br>每<code>ntwr</code>步更新一次，任务结束后也更新一次，默认值等于nstlim（只在任务结束写入一次）</li>
+<li><strong>iwrap</strong><br>写入到轨线和rst文件中时分子的绝对位置和相对位置：<br><code>1</code>   （写入每个分子在初始盒子中对应的等价分子，利用平移对称性只用初始盒子的大小描述体系）<br><code>0</code>   （写入每个分子的绝对位置，往往用于扩散分析，在1的情况下无法分析扩散）<br><img src="/images/iwarp.png" alt=""><br><font color=grey size=2><center>类似贪吃蛇</center></font><br><font color=pink size=2>*不涉及扩散分析的任务都建议使用iwarp=1</font></li>
+</ul>
+<ul>
+<li><p><strong>ntf</strong>与<strong>ntc</strong><br>SHAKE键振动限制，往往设置NTF=NTC<br>目的：<br>MD的基础步长受体系中最快的运动限制，限制最快的X-H振动以获取更大的步长<br>TIP3P也是在限制X-H振动的情况下拟合的，使用该力场需要加对应限制<br><code>1</code> （不使用SHAKE）<br><code>2</code> （所有含H的键被限制，在dt=0.002时必用）<br><code>3</code> （所有键长都被固定）</p>
+</li>
+<li><p><strong>nstlim</strong><br>MD的步数</p>
+</li>
+<li><p><strong>dt</strong><br>MD的步长，单位：ps，默认为0.001，加氢SHAKE往往使用0.002</p>
+</li>
+<li><p><strong>cut</strong><br>描述nonbonded截断的范围 单位：埃<br>范围内静电作用使用精确的 QQ/r^2 范围外用Particle Mesh Ewald (PME)方法近似<br>有文献指出需要大于等于10.0，尤其是计算蛋白相互作用时</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>ntt</strong><br>温度控制<br><code>0</code> （体系能量固定，绝热，NVE系综）<br><code>1</code> （恒定温度，使用weak-coupling算法：只保证总动能不变，将超出的动能重新分配。不能保证温度在分子各处一致，往往导致低频自由度能量过高，无法保证各自由度间的能量关系）<br><code>2</code> （恒定温度，使用Anderson-like算法：每隔<code>vrand</code>步就模拟碰撞，随机的重置体系中的速度以符合设定温度。会导致轨线没有绝对时间相关的意义，只有在<code>vrand</code>步之内可以进行绝对时间相关的分析，<code>vrand</code>值太小会导致构象空间的探索变慢(默认1000)）<br><code>3</code> （恒定温度，使用Langevin算法：使用<code>gamma_ln</code>设置的$\gamma$值，有时会崩溃？）<br><code>9</code> （恒定温度，使用优化的Isokinetic Nose-Hoover chain ensemble (OIN)方法：貌似是为了使用一些加速步进的方法？）<br><code>10</code>（恒定温度，使用Stochastic Isokinetic Nose-Hoover RESPA integrator方法：貌似是为了使用一些加速步进的方法？Tuckerman组开发）<br><code>11</code>（Berendsen控温器，之后用到了再补充）</p>
+</li>
+<li><p><strong>nmropt</strong><br><code>0</code> (默认)无nmr分析<br><code>1</code> 读入NMR限制和权重变化 （控制恒温器温度变化）<br><code>2</code> 读入NMR限制、权重变化、NOESY volumes、化学位移、残基偶极限制</p>
+</li>
+<li><p><strong>temp0</strong><br>设定恒定温度值，大于300时需要降低步长</p>
+</li>
+<li><p><strong>tempi</strong><br>初始温度，用于heat步，初始速度使用maxwellian分布<br>可增加温度控制段，设置在不同阶段温度的变化，如：</p>
+<figure class="highlight plain"><figcaption><span>heat.in >folded</span></figcaption><table><tr><td class="code"><pre><span class="line">&amp;wt</span><br><span class="line"> type  &#x3D; &#39;TEMP0&#39;,</span><br><span class="line"> istep1&#x3D; 0, istep2&#x3D;18000,</span><br><span class="line"> value1&#x3D; 0.0, value2&#x3D;300.0,  #在前18000步升温至300K</span><br><span class="line">&#x2F;</span><br><span class="line">&amp;wt</span><br><span class="line"> type  &#x3D; &#39;TEMP0&#39;,</span><br><span class="line"> istep1&#x3D; 18001, istep2&#x3D;20000,</span><br><span class="line"> value1&#x3D; 300.0, value2&#x3D;300.0,   #在后2000步保持恒温</span><br><span class="line">&#x2F;</span><br><span class="line">&amp;wt</span><br><span class="line"> type  &#x3D; &#39;END&#39;,</span><br><span class="line">&#x2F;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>ig</strong><br>决定初始速度的随机种子，也决定了Langevin和Anderson-like方法中的伪随机值<br><code>-1</code> （时间相关的随机种子）默认<br><code>其他值</code> （固定种子，一般只在调试时使用）</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>ntp</strong><br>压力控制，逐渐调整cell体积以达到设定压力<br><code>0</code> （无压力控制，默认）<br><code>1</code> （使用各向同性位置修正）<br><code>2</code> （使用各向异性位置修正，只能用于正交盒子，一般用于膜系统的模拟）<br><code>3</code> （使用半各向异性位置修正，只能用于正交盒子和恒定表面张力体系，将表面切向的两个压力耦合在一起）</p>
+</li>
+<li><p><strong>pres0</strong><br>恒定压力值，单位bar，默认为 1.0</p>
+</li>
+<li><p><strong>ntb</strong><br>周期性边界的类型, Amber20中不需要单独设置<br><code>0</code> （无周期性边界 关闭PME 微观系综）<br><code>1</code> （定容）<br><code>2</code> （定压）</p>
+</li>
+<li><p><strong>ntr</strong><br>用简谐势在笛卡尔空间中限制原子位置<br>需要指定参考结构<code>-ref</code> 目标原子 和 力常数<br><code>0</code> （不限制）<br><code>1</code> （限制）</p>
+</li>
+<li><p><strong>restraint_wt</strong><br>位置限制的权重，单位：$kcal·mol^{−1}·Å^{−2}$<br>设置$k(\Delta x)^2$ 中的k值</p>
+</li>
+<li><p><strong>restraintmask</strong><br>描述目标原子，<br>语法：</p>
+<ul>
+<li>描述基元<br><font color=grey size=2>起始符</font><br><code>:</code> 起始选择残基<br><code>@</code> 起始描述原子<br><font color=grey size=2>序号/名称选择</font><br>可以用 <code>,</code> 分隔和 <code>-</code> 连接的序号描述 例：<code>:1-10,12</code> 和 <code>@12,54-85</code><br>可以用残基/原子名称描述 例：<code>:ARG,ALA</code> 和 <code>@CA,C,O</code><br>可以用原子类型描述 但是需要在 <code>@</code> 后加 <code>%</code> 例： <code>@%N*,N3</code><br>可以用 <code>:*</code> 描述所有结构，注意！不是通配符，貌似是由于有些原子类型里包含星号如C*<br>可以用 <code>=</code> 充当通配符，但是只能在字符之后 例:<code>@H=</code> 描述所有H原子</li>
+<li>描述基元间<br><font color=grey size=2>逻辑关系</font><br><code>&amp;</code> 或 <code>|</code> 与 <code>!</code> 非<br><font color=grey size=2>距离关系</font><br><code>&lt;:数字</code> 与 <code>&gt;:数字</code> 在<code>数字</code>范围之内/之外的所有残基<br><code>&lt;@数字</code> 与 <code>&gt;@数字</code> 在<code>数字</code>范围之内/之外的所有原子<br>*可以用<code>()</code>描述结合的优先级</li>
+</ul>
+<p>可以用ambmask测试<br><code>ambmask -p prmtop -c inpcrd -out [short| pdb| amber] -find [maskstr]</code><br>会输出选中原子到stdout</p>
+</li>
+</ul>
+<h2 id="施加基于内坐标的constraint"><a href="#施加基于内坐标的constraint" class="headerlink" title="施加基于内坐标的constraint"></a>施加基于内坐标的constraint</h2><h3 id="NMR-restraint的方案"><a href="#NMR-restraint的方案" class="headerlink" title="NMR restraint的方案"></a>NMR restraint的方案</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="http://ambermd.org/tutorials/advanced/tutorial4/index.htm">Amber tutorial</a><br><a target="_blank" rel="noopener" href="http://ambermd.org/Questions/constraints.html">http://ambermd.org/Questions/constraints.html</a></p>
+</blockquote>
+<ol>
+<li>在.in文件中加入<code>nmropt=1</code>关键字，在结尾添加<code>DISANG=&#123;path-to-rs-file&#125;</code></li>
+<li>制作.rs文件描述restraint <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&amp;rst  </span><br><span class="line">iat&#x3D;&#123;atom_idx&#125;,&#123;atom_idx&#125;, r1&#x3D;抛物线势左起点, r2&#x3D;抛物线势左终点, r3&#x3D;抛物线势右起点, r4&#x3D;抛物线势右终点, rk2&#x3D;左边抛物线力常数, rk3&#x3D;右边抛物线力常数,</span><br><span class="line">ir6&#x3D;&#123;指定一组原子时确定中心的方式&#125;, ialtd&#x3D;&#123;在势极大时的行为&#x2F;是否将偏离过大的结构拖回&#125;</span><br><span class="line">&amp;end</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<h2 id="验证MD结果是否有效"><a href="#验证MD结果是否有效" class="headerlink" title="验证MD结果是否有效"></a>验证MD结果是否有效</h2><p>查看out文件中的参数随轨线步数变化<br>使用<a target="_blank" rel="noopener" href="http://ambermd.org/tutorials/advanced/tutorial3/files/process_mdout.perl">process_mdout.perl</a>脚本处理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">perl process_mdout.pl 文件名</span><br></pre></td></tr></table></figure>
+<p>用cpptraj查看RMSD</p>
+<figure class="highlight plain"><figcaption><span>cpptraj.in</span></figcaption><table><tr><td class="code"><pre><span class="line">parm *prmtop</span><br><span class="line">trajin *nc</span><br><span class="line">rms ToFirst out 名称.rmsd @CA,C,N  #restraintmask描述的目标原子</span><br><span class="line">run</span><br></pre></td></tr></table></figure>
+
+<p>如果在prod步之前密度、温度、能量、rmsd都收敛，同时prod中这几项稳定<br>则认为prod产生的数据可以用于采样</p>
+<h2 id="关于提升GPU下的计算效率"><a href="#关于提升GPU下的计算效率" class="headerlink" title="关于提升GPU下的计算效率"></a>关于提升GPU下的计算效率</h2><p>Amber文档中给出的最大化GPU加速效率的建议：</p>
+<ol>
+<li>避免使用过高的写入频率（小的NTPR, NTWX, NTWV, NTWE, NTWR）</li>
+<li>避免$ntave \neq 0$</li>
+<li>避免在不必要时使用NPT系综，考虑使用Monte Carlo barostat (barostat=2)</li>
+<li>使用gbsa=3而不是gbsa=1，前者适合GPU</li>
+<li>使用langevin温度控制会稍微降低速度</li>
+</ol>
+<h1 id="MMPBSA-与-MMGBSA"><a href="#MMPBSA-与-MMGBSA" class="headerlink" title="MMPBSA 与 MMGBSA"></a>MMPBSA 与 MMGBSA</h1><p>将结合自由能拆分成气相的结合自由能和三个物种各自的溶剂化自由能<br>$\Delta G_{solv,bind}^0 = \Delta G_{bind,vacuum}^0+\Delta G_{solv,complex}^0−(\Delta G_{solv,ligand}^0+\Delta G_{solv,receptor}^0)$<br>GB（Generalized Born）和PB（Poisson-Boltzman）描述不同的求解溶剂化自由能中静电部分的方法<br>使用<a href="https://doi.org/10.1002/(SICI)1096-987X(19990130)20:2<217::AID-JCC4>3.0.CO;2-A">LCPO</a>方法求解疏水部分的贡献<br><a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/10.1002/jcc.24467">J. Comput. Chem., 2016, 37, 2436–2446</a><br><a target="_blank" rel="noopener" href="https://doi.org/10.1021/ct300418h">关于参数选取</a></p>
+<hr>
+<h2 id="准备文件"><a href="#准备文件" class="headerlink" title="准备文件"></a>准备文件</h2><p>需要准备三部分文件：</p>
+<ul>
+<li><p>轨线（.nc）</p>
+</li>
+<li><p>描述配体、受体、复合物和溶剂化复合物的拓扑文件（.prmtop）</p>
+<ul>
+<li><p>为PB/GB设置合适的<code>PBRadii</code><br>该设置(只作用用隐式溶剂模型)不影响常规(即使用显式溶剂)MD计算 <a target="_blank" rel="noopener" href="http://archive.ambermd.org/201604/0297.html">相关讨论</a><br>可以通过<code>set</code>修改leap的全局设置之后生成新的prmtop文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set default PBRadii mbondi2</span><br></pre></td></tr></table></figure>
+<p>也可以通过ParmEd修改现有的prmtop文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">parmed -p &lt;your_prmtop&gt; -i input_file</span><br></pre></td></tr></table></figure>
+<p>input_file中为</p>
+<figure class="highlight plain"><figcaption><span>parmed.in</span></figcaption><table><tr><td class="code"><pre><span class="line">changeRadii mbondi2</span><br><span class="line">parmout new_radii.prmtop        </span><br></pre></td></tr></table></figure>
+
+<p>参数参考</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>igb值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bondi</td>
+<td>7</td>
+</tr>
+<tr>
+<td>mbondi</td>
+<td>1</td>
+</tr>
+<tr>
+<td>mbondi2</td>
+<td>2 or 5</td>
+</tr>
+<tr>
+<td>mbondi3</td>
+<td>8</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>分别为三部分结构生成不含溶剂的拓扑文件</p>
+</li>
+<li><p>同时需要了解体系的离子强度</p>
+</li>
+</ul>
+</li>
+<li><p>设置输入文件（.in）<br>格式类似MD的输入文件<code>$AMBERHOME/bin/MMPBSA.py --input-file-help</code>可以查询可设置选项</p>
+<figure class="highlight plain"><figcaption><span>MMPBSA.in</span></figcaption><table><tr><td class="code"><pre><span class="line">Sample input file for GB and PB calculation</span><br><span class="line">&amp;general</span><br><span class="line">  startframe&#x3D;5, endframe&#x3D;100, interval&#x3D;5,</span><br><span class="line">  verbose&#x3D;2, keep_files&#x3D;0,</span><br><span class="line">&#x2F;</span><br><span class="line">&amp;gb</span><br><span class="line">  igb&#x3D;5, saltcon&#x3D;实际离子浓度,</span><br><span class="line">&#x2F;</span><br><span class="line">&amp;pb</span><br><span class="line">  istrng&#x3D;实际离子浓度, fillratio&#x3D;4.0,</span><br><span class="line">&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p><code>startframe</code> &amp; <code>endframe</code> 描述开始和结束的帧<br><code>interval</code> 步长<br><code>keep_files</code> 默认是1（保留所有轨迹文件和mdout）0（删除所有）2（保留所有）<br>(*<a target="_blank" rel="noopener" href="http://archive.ambermd.org/201904/0004.html">关于巨大的reference.frc</a> 重编译有些时候不太显示，希望之后amber能给个选项)<br><code>verbose</code> 0（只输出差值部分）1（也输出组分的数据）2（增加bonded terms）</p>
+</li>
+</ul>
+<p>  <code>saltcon</code> 盐浓度（单位：M）<br>  <code>istrng</code>  离子强度（单位：M）<br>  <code>fillratio</code> 矩形有限差分网格的最长维度与溶质的最长维度之比。对于与水尺度类似的溶剂一般不用改</p>
+<p>  gb和pb部分设置对应的参数</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$AMBERHOME&#x2F;bin&#x2F;MMPBSA.py -O -i MMPBSA.in -o FINAL_RESULTS_MMPBSA.dat -sp complex_solvated.prmtop -cp complex.prmtop -rp receptor.prmtop -lp ligand.prmtop -y *.mdcrd</span><br></pre></td></tr></table></figure>
+<p>或者使用并行版</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mpirun -np 核数 $AMBERHOME&#x2F;bin&#x2F;MMPBSA.py.MPI -O -i MMPBSA.in -o FINAL_RESULTS_MMPBSA.dat -sp complex_solvated.prmtop -cp complex.prmtop -rp receptor.prmtop -lp ligand.prmtop -y *.mdcrd</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>TIPS for COMET USER</strong><br>在comet上没有直接的MMPBSA.py.MPI文件 经过咨询了解到可以直接讲MMPBSA.py复制到自己目录下为MMPBSA.py.MPI<br>参考的提交脚本：</p>
+<figure class="highlight sh"><figcaption><span>RunMMPBSA.sh >folded</span></figcaption><table><tr><td class="code"><pre><span class="line">&gt; <span class="comment">#!/usr/bin/env bash</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --job-name=name</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --partition=compute</span></span><br><span class="line">&gt; <span class="comment">#SBATCH -N 1</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --ntasks-per-node=24</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --mem=100GB</span></span><br><span class="line">&gt; <span class="comment">#SBATCH -t 48:00:00</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --signal=B:SIGUSR1@60</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --verbose</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --hint=nomultithread</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --mail-user=mail</span></span><br><span class="line">&gt; <span class="comment">#SBATCH --mail-type=all</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="comment">#Run MMPBSA</span></span><br><span class="line">&gt; module purge</span><br><span class="line">&gt; module load amber</span><br><span class="line">&gt; module load intel</span><br><span class="line">&gt; module load mpi4py</span><br><span class="line">&gt; </span><br><span class="line">&gt; ibrun python3 /path/to/MMPBSA.py.MPI .... options ...</span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h2><p>计算会在当前目录下输出</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*.mdcrd</td>
+<td>GB和PB计算过程中分析过的坐标</td>
+</tr>
+<tr>
+<td>*.mdout</td>
+<td>所有指定帧的能量 –&gt; 并行按后缀依次合并即可</td>
+</tr>
+<tr>
+<td>*.pdb</td>
+<td>平均结构的PDB文件,可进行准简谐熵计算</td>
+</tr>
+<tr>
+<td>FINAL_RESULTS_MMPBSA.dat</td>
+<td>结果输出文件</td>
+</tr>
+</tbody></table>
+<p>其中结果输出文件中会输出组分能量项：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>VDWAALS</code></td>
+<td>$H_{MM,vdw}$分子力场能的<strong>vdw</strong>部分</td>
+</tr>
+<tr>
+<td><code>EEL</code></td>
+<td>$H_{MM,ele}$分子力场能的<strong>静电</strong>部分 (不包含周期性边界条件cut=999.0)</td>
+</tr>
+<tr>
+<td><code>EPB/EGB</code></td>
+<td>$E_{solv,ele}$溶剂化自由能的<strong>静电</strong>部分，由PB或GB计算</td>
+</tr>
+<tr>
+<td><code>ESURF</code></td>
+<td>$E_{solv,nonpolar}$ ？？有什么区别 (GB only)</td>
+</tr>
+<tr>
+<td><code>ENPOLAR</code></td>
+<td>$E_{solv,nonpolar}$ 非极化作用的空穴部分 // 在mdout文件里也被写做ECAVITY (PB only)</td>
+</tr>
+<tr>
+<td><code>EDISPER</code></td>
+<td>$E_{solv,nonpolar,disper}$ 非极化作用的色散部分 (PB only)</td>
+</tr>
+</tbody></table>
+<p>其中并行相关的帧分配方式：将所有帧连续的分成MPI.COMM_WORLD.get_size()块之后，块的大小通过平均后渐进的方式决定</p>
+<figure class="highlight python"><figcaption><span>MMPBSA_mods.make_trajs.py >folded</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sanity check</span></span><br><span class="line"><span class="keyword">if</span> traj.processed_frames &lt; size: </span><br><span class="line">  <span class="keyword">raise</span> MMPBSA_Error(<span class="string">&#x27;Must have at least as many frames as processors!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># We now know how many frames we have in total, so make a list that lists the</span></span><br><span class="line"><span class="comment"># number of frames found for each rank, and assign extra frames incrementally</span></span><br><span class="line">frames_per_rank = traj.processed_frames // size</span><br><span class="line">extras = traj.processed_frames - frames_per_rank * size</span><br><span class="line">frame_count = [frames_per_rank <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(size)]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(size):</span><br><span class="line">  <span class="keyword">if</span> i &lt; extras: frame_count[i] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Dump our complex trajectories</span></span><br><span class="line"><span class="keyword">if</span> INPUT[<span class="string">&#x27;full_traj&#x27;</span>] <span class="keyword">or</span> INPUT[<span class="string">&#x27;entropy&#x27;</span>]:</span><br><span class="line">  traj.Outtraj(pre + <span class="string">&#x27;complex.%s&#x27;</span> % trj_suffix, filetype=INPUT[<span class="string">&#x27;netcdf&#x27;</span>])</span><br><span class="line">traj.Outtraj(pre + <span class="string">&#x27;complex.pdb&#x27;</span>, frames=<span class="string">&#x27;1&#x27;</span>, filetype=<span class="string">&#x27;pdb&#x27;</span>)</span><br><span class="line">traj.Outtraj(pre + <span class="string">&#x27;dummycomplex.inpcrd&#x27;</span>,frames=<span class="string">&#x27;1&#x27;</span>,filetype=<span class="string">&#x27;restart&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now dump thread-specific trajectories</span></span><br><span class="line">last_frame = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(size):</span><br><span class="line">  frame_string = <span class="string">&#x27;%d-%d&#x27;</span> % (last_frame, last_frame+frame_count[i]-<span class="number">1</span>)</span><br><span class="line">  traj.Outtraj(pre + <span class="string">&#x27;complex.%s.%d&#x27;</span> % (trj_suffix, i), </span><br><span class="line">                frames=frame_string, filetype=INPUT[<span class="string">&#x27;netcdf&#x27;</span>])</span><br><span class="line">  last_frame += frame_count[i]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>根据mdout文件的逐帧分析/作图脚本<br><a target="_blank" rel="noopener" href="https://github.com/shaoqx/CalcKit/tree/master/Misc_scripts/MMPBSA">https://github.com/shaoqx/CalcKit/tree/master/Misc_scripts/MMPBSA</a><br>提取每一帧各能量项的数值，可以容易的分析和作图</li>
+</ul>
+<h2 id="MMPBSA中包含的熵"><a href="#MMPBSA中包含的熵" class="headerlink" title="MMPBSA中包含的熵"></a>MMPBSA中包含的熵</h2><p>分子力场项 - 不包含熵<br>溶剂静电PB项 - 不包含熵<br>溶剂非极性部分(inp=2) - 1. 形成空穴（溶剂内聚能破坏，溶剂熵减）2. 溶质溶剂吸引（VDW作用）</p>
+<h2 id="MMPBSA中的周期性边界条件"><a href="#MMPBSA中的周期性边界条件" class="headerlink" title="MMPBSA中的周期性边界条件"></a>MMPBSA中的周期性边界条件</h2><p>查看具体的模块发现计算MM部分能量时使用的是无周期性边界条件(igb&gt;0时默认关闭周期性边界条件ntb=0，cut=999.0)<br>这就意味着盒子的大小和形状会对结果产生影响（离子的位置？）<br><font color=red size=3>！！如果用长方形盒子必然会导致GPU在equi步报错！！</font></p>
+<h2 id="关于各种选项"><a href="#关于各种选项" class="headerlink" title="关于各种选项"></a>关于各种选项</h2><p>根据<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4487606/">Expert Opin Drug Discov. 2015 May 4; 10(5): 449–461.</a>一文，总结一些在用MMPBSA研究新体系的思考：</p>
+<ul>
+<li>一般可选择的有：<ul>
+<li>PB/GB</li>
+<li>3A/1A</li>
+<li>关键水的处理</li>
+<li>计算熵的方法<br>根据文中的建议，这些选择和对研究的具体体系有一定的依赖性，最好在研究之前benchmark</li>
+</ul>
+</li>
+<li>采样方法：<br>文中建议使用多次短模拟合并采样的方法，以降低SD为标准，正在测试其可靠性<br>使用循环多次跑prod步<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for i in &#123;1..20&#125;; do pmemd.cuda -O -i .&#x2F;MD&#x2F;prod.in -o .&#x2F;MD&#x2F;prod$&#123;i&#125;.out -p *.prmtop -c .&#x2F;MD&#x2F;equi.rst -ref .&#x2F;MD&#x2F;equi.rst -r .&#x2F;MD&#x2F;prod_$&#123;i&#125;.rst -x .&#x2F;MD&#x2F;prod_$&#123;i&#125;.nc; done</span><br></pre></td></tr></table></figure>
+之后用cpptraj合并<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">parm ..&#x2F;*.prmtop</span><br><span class="line">trajin prod*.nc 200 last</span><br><span class="line">autoimage</span><br><span class="line">trajout prod.nc</span><br><span class="line">go</span><br></pre></td></tr></table></figure>
+对比；<ol>
+<li>跑100ns取后90ns，每10ps一帧取9000帧分析 （结果比较接近实验值）</li>
+<li>跑100ns取后90ns，每30ps一帧取3000帧分析 （结果比较接近实验值）</li>
+<li>跑20条5ns 每个轨迹取后4.5ns，每10ps一帧合起来共9000帧 （结果很差）</li>
+<li>跑20条5ns 每个轨迹取后4.5ns，每30ps一帧合起来共3000帧 （结果很差）</li>
+</ol>
+</li>
+</ul>
+<h1 id="非标准残基的参数化"><a href="#非标准残基的参数化" class="headerlink" title="非标准残基的参数化"></a>非标准残基的参数化</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://ambermd.org/tutorials/basic/tutorial5/index.php">相关参考教程</a><br>例子 <a target="_blank" rel="noopener" href="http://ambermd.org/antechamber/pro4.html">http://ambermd.org/antechamber/pro4.html</a></p>
+</blockquote>
+<ol>
+<li><p>从PDB中复制非天然氨基酸的几行保存为新文件(每类一个即可) <strong>注意需要把空缺的化合价补全，一般最后是一个独立氨基酸的结构，否则antechamber难以正确判断原子类型</strong></p>
+</li>
+<li><p>使用antechamber生成ac文件</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">antechamber -fi pdb -i &#123;输入路径.pdb&#125; -fo ac -o &#123;输出路径.ac&#125; -c bcc -at amber -nc &#123;净电荷数&#125;</span><br></pre></td></tr></table></figure>
+<p> “Note that antechamber is mostly set up to use gaff atom types, so it occasionally makes a mistake with the Amber atom types.”<br> 这要怎么自动化啊，问题看起来是随机的，要怎么确定什么原子类型是正确的？貌似每次都会把N给错<br> *注意生成的ac文件会修改原子名称，会将所有数字开头的原子名称修改</p>
+</li>
+<li><p>制作描述和蛋白其他部分连接方式的mc文件(<em>mianchain</em>)</p>
+ <figure class="highlight plain"><figcaption><span>XXX.mc >folded</span></figcaption><table><tr><td class="code"><pre><span class="line">HEAD_NAME &#123;连接前一个氨基酸的原子名，如N1&#125;</span><br><span class="line">TAIL_NAME &#123;连接后一个氨基酸的原子名，如C3&#125;</span><br><span class="line">MAIN_CHAIN &#123;从head到tail依次的原子名&#125;</span><br><span class="line">MAIN_CHAIN &#123;...&#125;</span><br><span class="line">MAIN_CHAIN &#123;...&#125;</span><br><span class="line">MAIN_CHAIN &#123;...&#125;</span><br><span class="line">OMIT_NAME &#123;需要从最终结构中删除的原子，如某些构建方式中会多出来的H&#125;</span><br><span class="line">OMIT_NAME &#123;...&#125;</span><br><span class="line">OMIT_NAME &#123;...&#125;</span><br><span class="line">OMIT_NAME &#123;...&#125;</span><br><span class="line">PRE_HEAD_TYPE &#123;前一个氨基酸用来连接改氨基酸的原子类型，如C&#125;</span><br><span class="line">POST_TAIL_TYPE &#123;后一个氨基酸用来连接改氨基酸的原子类型，如N&#125;</span><br><span class="line">CHARGE &#123;净电荷数&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>使用prepgen生成prepin文件</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">prepgen -i &#123;输入路径.ac&#125; -o &#123;输出路径.prepin&#125; -m &#123;mc文件路径.mc&#125; -rn &#123;残基名&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>使用frcmod第一次使用天然氨基酸的参数(ff14SB)参数化</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">parmchk2 -i &#123;输入路径.prepin&#125; -f prepi -o &#123;输出路径.frcmod&#125; -a Y -p $AMBERHOME&#x2F;dat&#x2F;leap&#x2F;parm&#x2F;parm10.dat</span><br></pre></td></tr></table></figure></li>
+<li><p>将没有参数化的部分用gaff生成的参数补全</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep -v &quot;ATTN&quot; &#123;路径.frcmod&#125; &gt; &#123;路径.frcmod1&#125; # Strip out ATTN lines</span><br><span class="line">parmchk2 -i &#123;路径.prepin&#125; -f prepi -o &#123;路径.frcmod2&#125;</span><br></pre></td></tr></table></figure>
+<p> 最后得到两个参数文件</p>
+</li>
+<li><p>使用prepin和两个frcmod文件通过tleap完成最后的参数整合</p>
+</li>
+</ol>
+<h1 id="MCPB-py的使用"><a href="#MCPB-py的使用" class="headerlink" title="MCPB.py的使用"></a>MCPB.py的使用</h1><blockquote>
+<p>参考官网教程<br><a target="_blank" rel="noopener" href="http://ambermd.org/tutorials/advanced/tutorial20/mcpbpy.htm">http://ambermd.org/tutorials/advanced/tutorial20/mcpbpy.htm</a><br>相关教程<br><a target="_blank" rel="noopener" href="http://bbs.keinsci.com/thread-26531-1-1.html">http://bbs.keinsci.com/thread-26531-1-1.html</a></p>
+</blockquote>
+<p><code>MCPB.py [flags] [options]</code><br>-i 输入文件<br>-s 步骤数</p>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>参数化金属中心(MetalUnit)以及附近的配体残基（非标准质子态）（非标准连接方式）</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>大致流程是：</p>
+<ol>
+<li>制作目标蛋白模型 </li>
+<li>从目标模型中提取出各种参数化相关的组件(mol2格式) </li>
+<li>使用MCPB.py根据提供的组件自动生成Gaussian输入文件 </li>
+<li>Gaussian计算，利用MCPB.py自动读取输出文件中的信息完成参数化</li>
+</ol>
+<h3 id="I-制作目标蛋白模型-preparation"><a href="#I-制作目标蛋白模型-preparation" class="headerlink" title="I. 制作目标蛋白模型(preparation)"></a>I. 制作目标蛋白模型(preparation)</h3><p>根据研究需求制作目标蛋白的MD-ready模型<br>要求：</p>
+<ol>
+<li>无原子缺失(蛋白，cofactor，底物，水 的轻重原子)</li>
+<li>正确的质子态(确定配体、水的质子朝向合理)</li>
+<li>cofactor处于合理的binding位置</li>
+<li>底物处于合理的binding位置</li>
+<li>包含必要的active site water</li>
+</ol>
+<p>转换为amber格式的pdb并重置index</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pdb4amber -i &#123;输入路径&#125; -o &#123;输出路径&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="II-提取目标蛋白模型组件-mol2文件"><a href="#II-提取目标蛋白模型组件-mol2文件" class="headerlink" title="II. 提取目标蛋白模型组件(mol2文件)"></a>II. 提取目标蛋白模型组件(mol2文件)</h3><p>以及非天然氨基酸和配体的frcmod参数文件<br>“MCPB.py uses mol2 files based on the residue names” - 只要保证各组件残基名称和PDB中保持一致即可<br>“You need to create different mol2 files for different <em>TYPES</em> of metals, water, and NCAA in the PDB file” - 每类组件只需要一个mol2文件</p>
+<ul>
+<li><p>金属离子</p>
+<ol>
+<li>从蛋白的PDB中，复制金属离子的一行保存为新文件(一个原子即可)</li>
+<li>运行metalpdb2mol2.py脚本，指定<strong>电荷</strong>，并生成mol2文件<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python metalpdb2mol2.py -i &#123;输入路径&#125; -o &#123;输出路径&#125; -c &#123;电荷数&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>Active site water 水</p>
+<ol>
+<li>从PDB中复制水的几行保存为新文件(一个水即可)(*需要氢和朝向正确)</li>
+<li>使用antechamber生成mol2文件<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">antechamber -fi pdb -fo mol2 -i WAT_H.pdb -o WAT.mol2 -at amber -c bcc -pf y</span><br></pre></td></tr></table></figure></li>
+<li>将mol2中的原子类型从oh和ho修改为OW和HW (<a target="_blank" rel="noopener" href="http://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/WAT.mol2">例</a>)</li>
+</ol>
+</li>
+<li><p>配体（cofactor和底物）</p>
+<ol>
+<li>从PDB中复制配体的几行保存为新文件(每类一个配体即可)</li>
+<li>使用antechamber生成mol2文件<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">antechamber -fi pdb -fo mol2 -i &#123;输入路径&#125; -o &#123;输出路径&#125; -c bcc -pf y -nc &#123;配体净电荷数&#125;</span><br></pre></td></tr></table></figure>
+*注意最后保存的mol2文件的名称要和PDB中配体的残基名一致</li>
+<li>生成frcmod文件<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">parmchk2 -i &#123;输入路径&#125; -o &#123;输出路径&#125; -f mol2</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>非天然氨基酸(modified AA)</p>
+<ol>
+<li><p>参考”非标准残基的参数化”一节<br>生成prepin,frcmod1,frcmod2文件</p>
+</li>
+<li><p>将prepin文件转换为mol2文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">antechamber -fi prepi -i &#123;输入路径.prepin&#125; -fo mol2 -o &#123;输出路径.mol2&#125; -nc &#123;净电荷数&#125;</span><br></pre></td></tr></table></figure>
+<p>*注意最后保存的mol2文件的名称要和PDB中配体的残基名一致<br>*检查mol2中的原子类型名称和prepin中的是否一致</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="III-使用MCPB-py生成Gaussian输入文件"><a href="#III-使用MCPB-py生成Gaussian输入文件" class="headerlink" title="III. 使用MCPB.py生成Gaussian输入文件"></a>III. 使用MCPB.py生成Gaussian输入文件</h3><ol>
+<li><p><strong>配置MCPB计算</strong><br>制作.in配置文件</p>
+<figure class="highlight plain"><figcaption><span>mcpb.in >folded</span></figcaption><table><tr><td class="code"><pre><span class="line">original_pdb &#123;完整模型路径.pdb&#125;</span><br><span class="line">group_name &#123;自定义一个名字&#125;</span><br><span class="line">cut_off &#123;参数化区域选择范围，默认填2.8&#125;</span><br><span class="line">ion_ids &#123;金属的原子序号  (空格分隔可以多个,但是只能是一个金属complex里的多个)&#125;</span><br><span class="line">ion_mol2files &#123;金属的mol2文件  (空格分隔可以多个,但是只能是一个金属complex里的多个)&#125;</span><br><span class="line">naa_mol2files &#123;非天然氨基酸的mol2文件 *配体、水、cofactor、modified AA  (空格分隔可以多个)&#125;</span><br><span class="line">frcmod_files &#123;补充的参数文件 *配体、cofactor、modified AA  (空格分隔可以多个)&#125;</span><br><span class="line">large_opt &#123;是否优化大模型，默认填1 (1：只优化H、0：不优化)&#125;</span><br><span class="line">software_version &#123;g16或g09&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font color=red size=2>不在金属中心附近的mol2和frcmod文件影响什么 我不小心没加上但是也没有报错？</font></p>
+<ul>
+<li>不在目标金属中心附近的NCAA的mol2和frcmod文件貌似不影响结果，测试了在mcpb.in中加和不加两种情况得到的最终的mol2文件和frcmod文件没有区别<br>貌似只影响最后生成的tleap.in文件</li>
+</ul>
+</li>
+<li><p><strong>运行MCPB生成com文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">MCPB.py -i &#123;路径.in&#125; -s 1</span><br></pre></td></tr></table></figure>
+<p>此步会生成小模型、标准模型和大模型的PDB和fingerprint文件。还会生成小模型和大模型的高斯输入文件。</p>
+</li>
+</ol>
+<ul>
+<li>大模型  的高斯输入文件将首先对氢原子进行优化，以纠正任何放置不当的氢原子。</li>
+<li>标准模型fingerprint文件（1mlw_standard.fingerprint）包含标准模型中原子的原子类型信息（第3列是原始原子类型，最后一列是最终分配的原子类型）。金属离子的原子类型（名称以 M 开头）和连接原子（名称以 Y/Z 开头）会自动重命名，以将它们与 AMBER 力场中的其他原子类型区分开来。(为了参数化后的识别)<ul>
+<li>可以将 step_number 设为 1n 来强制不重命名任何原子类型并生成fingerprint文件，然后手动修改（在此之前，请检查 AMBER force field parm*.dat  文件以确保金属离子和连接原子类型  不与amber已有的原子类型冲突）。</li>
+<li>fingerprint文件在文件末尾还包含金属离子与周围原子之间的链接信息，开头字母为“LINK”。用户还可以根据自己的需要手动修改它们（例如，如果 QM 几何优化后有任何连接更改）</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><strong>运行Gaussian计算</strong></li>
+</ol>
+<p>MCPB.py生成的输入文件默认用的是B3LYP/6-31G*、2核、3000MB。建议至少改为B3LYP-D3并根据实际资源修改核数和内存设置</p>
+<p><font color=orange size=3>注意！默认的自旋多重度可能有误，需要检查并修正！</font></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">g16 &lt; 1OKL_small_opt.com &gt; 1OKL_small_opt.log</span><br><span class="line"></span><br><span class="line">g16 &lt; 1OKL_small_fc.com &gt; 1OKL_small_fc.log</span><br><span class="line"></span><br><span class="line">formchk 1OKL_small_opt.chk 1OKL_small_opt.fchk</span><br><span class="line"></span><br><span class="line">g09 &lt; 1OKL_large_mk.com &gt; 1OKL_large_mk.log</span><br></pre></td></tr></table></figure>
+<p>这步得到的3个log文件和fchk文件需要被放置在与第一次运行MCPB.py相同的路径</p>
+<p>*需要检查优化得到的结构中配位键是否断裂，如果断裂需尝试：</p>
+<ul>
+<li>更换理论层级</li>
+<li>先固定优化其他坐标之后放开优化配位键</li>
+</ul>
+<h3 id="IV-使用MCPB-py读取Gaussian输出文件并生成参数"><a href="#IV-使用MCPB-py读取Gaussian输出文件并生成参数" class="headerlink" title="IV. 使用MCPB.py读取Gaussian输出文件并生成参数"></a>IV. 使用MCPB.py读取Gaussian输出文件并生成参数</h3><ul>
+<li><p>生成frcmod参数文件<br>在运行第一步的目录运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">MCPB.py -i 1OKL.in -s 2</span><br></pre></td></tr></table></figure>
+<p>*注意运行该步的时候目录下不能存在temp文件夹，该脚本貌似会生成一个temp文件</p>
+</li>
+<li><p>拟合电荷并生成mol2文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">MCPB.py -i 1OKL.in -s 3</span><br></pre></td></tr></table></figure>
+<p>默认使用charge model B</p>
+</li>
+<li><p>生成tleap输入文件和修改残基名后的PDB</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">MCPB.py -i 1OKL.in -s 4</span><br></pre></td></tr></table></figure>
+<p>获得</p>
+<ul>
+<li>{名称}_mcpbpy.pdb</li>
+<li>{名称}_tleap.in</li>
+</ul>
+</li>
+</ul>
+<h3 id="V-运行tleap-in完成参数化"><a href="#V-运行tleap-in完成参数化" class="headerlink" title="V. 运行tleap.in完成参数化"></a>V. 运行tleap.in完成参数化</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tleap -s -f &#123;名称&#125;_tleap.in</span><br></pre></td></tr></table></figure>
+<p>需要在tleap.in文件中加入所有非天然氨基酸、配体的参数对应命令</p>
+<p>可以改为用protein.ff14SB和water.TIP3P吗？<br>为什么会报错Residues lacking connect0/connect1？ 貌似是使用mol2和bond组合的<a target="_blank" rel="noopener" href="http://archive.ambermd.org/201705/0122.html">正常表现</a> 这个问题会导致直接用tleap生成的PDB存在错误的TER标记，但是参数经过parmed检查是正确的</p>
+<h3 id="V-1-（对于多聚体）修改pdb和tleap以适配其他金属中心"><a href="#V-1-（对于多聚体）修改pdb和tleap以适配其他金属中心" class="headerlink" title="V-1. （对于多聚体）修改pdb和tleap以适配其他金属中心"></a>V-1. （对于多聚体）修改pdb和tleap以适配其他金属中心</h3><p>对于多聚体，其他对称的金属中心可以使用其中一个金属中心MCPB得到的参数</p>
+<p>但是需要修改tleap.in和PDB使tleap可以讲其识别到对应的参数</p>
+<ul>
+<li><p>修改_mcpbpy.pdb中其他金属中心的残基名<br>参考MCPB.py第四步中输出的改名位点，例：</p>
+<figure class="highlight plain"><figcaption><span>XXX.mc >folded</span></figcaption><table><tr><td class="code"><pre><span class="line">Renamed residues includes: 519-HID</span><br><span class="line">Renamed residues includes: 521-HID</span><br><span class="line">Renamed residues includes: 684-HIE</span><br><span class="line">Renamed residues includes: 1441-CU</span><br><span class="line">Renamed residues includes: 1445-WAT</span><br></pre></td></tr></table></figure>
+<p>修改其他链中对应的名称</p>
+</li>
+<li><p>修改_tleap.in中的bond语句<br>为其他链的金属中心和配体添加对应的键，例：</p>
+<figure class="highlight plain"><figcaption><span>XXX.mc >folded</span></figcaption><table><tr><td class="code"><pre><span class="line">bond mol.519.NE2 mol.1441.CU</span><br><span class="line">bond mol.521.NE2 mol.1441.CU</span><br><span class="line">bond mol.684.ND1 mol.1441.CU</span><br><span class="line">bond mol.1441.CU mol.1445.O</span><br><span class="line">bond mol.518.C mol.519.N</span><br><span class="line">bond mol.519.C mol.520.N</span><br><span class="line">bond mol.520.C mol.521.N</span><br><span class="line">bond mol.521.C mol.522.N</span><br><span class="line">bond mol.683.C mol.684.N</span><br><span class="line">bond mol.684.C mol.685.N</span><br><span class="line">bond mol.1239.NE2 mol.1446.CU</span><br><span class="line">bond mol.1241.NE2 mol.1446.CU</span><br><span class="line">bond mol.1404.ND1 mol.1446.CU</span><br><span class="line">bond mol.1446.CU mol.1450.O</span><br><span class="line">bond mol.1238.C mol.1239.N</span><br><span class="line">bond mol.1239.C mol.1240.N</span><br><span class="line">bond mol.1240.C mol.1241.N</span><br><span class="line">bond mol.1241.C mol.1242.N</span><br><span class="line">bond mol.1403.C mol.1404.N</span><br><span class="line">bond mol.1404.C mol.1405.N</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="V-2-（对于多个不同金属中心）修改pdb和tleap-in"><a href="#V-2-（对于多个不同金属中心）修改pdb和tleap-in" class="headerlink" title="V-2. （对于多个不同金属中心）修改pdb和tleap.in"></a>V-2. （对于多个不同金属中心）修改pdb和tleap.in</h3><ul>
+<li><p>MCPB.py新加的原子类型名称都使用默认名称导致重复，需要更改重复的原子类型名称以适配多次MCBP生成的mol2和frcmod文件</p>
+<ul>
+<li>将重复的M1,Y1等原子类型重命名之后合并到tleap.in中</li>
+<li>在frcmod, mol2文件中查找替换成修改后的原子类型名称</li>
+</ul>
+</li>
+<li><p>将mol2文件和frcmod文件合并至tleap.in中<br>在此步注意如果有重复的残基名（例如有两个不同的Ca2+中心时都会被命名为CA1）需要在mol2文件和tleap.in都更改为彼此独特的残基名（如CA2）<br>**注意 CA2 = loadmol2 xxxx.mol中等号左边的名字符合和pdb配对 一定要修改</p>
+</li>
+<li><p>将bond指令合并至tleap.in中</p>
+</li>
+<li><p>将更新后的残基名合并到同一个pdb文件中</p>
+</li>
+<li><p><strong>如果两个不同的金属中心彼此比较接近/有共享的配体</strong><br>则难以以此方式合并参数，会引起一系列的参数确实错误<br>有些时候对于辅助折叠的金属中心可以使用<a target="_blank" rel="noopener" href="https://ambermd.org/tutorials/advanced/tutorial20/nonbonded_model.php">nonbonded model</a>来描述</p>
+</li>
+</ul>
+<h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><p>注意antechameber生成的mol2文件中的原子类型可能不规范 pymol可能会不识别从而转存的时候将原子名称搞错</p>
+<ul>
+<li>教程中提到需要修复原子序号的问题，但是没有修复也不怎么影响模拟，跑了100ns都没问题</li>
+</ul>
+<h1 id="轨线输出文件格式"><a href="#轨线输出文件格式" class="headerlink" title="轨线输出文件格式"></a>轨线输出文件格式</h1><ul>
+<li>mdcrd： ASCII编码的纯坐标 每帧由中心的<strong>三个坐标</strong>组成的一行分割 帧内由连续的每个原子的xyz坐标组成（每行10个数值）<figure class="highlight plain"><figcaption><span>amber.mdcrd >folded</span></figcaption><table><tr><td class="code"><pre><span class="line">Cpptraj Generated trajectory                                                    </span><br><span class="line">  17.357  12.865  14.673  17.869  12.805  13.804  16.361  12.909  14.514  17.650</span><br><span class="line">  12.025  15.151  17.683  14.091  15.410  17.493  14.988  14.820  17.057  14.204</span><br><span class="line">  ...</span><br><span class="line">  33.227  24.489   1.071  33.789  24.515   1.846  32.350  24.321   1.417</span><br><span class="line">  58.637  58.637  58.637</span><br><span class="line">  ...</span><br><span class="line">  [next frame]</span><br></pre></td></tr></table></figure></li>
+<li>NetCrd(.nc/.crd):  二进制的坐标文件<br>可以通过cpptraj将这些格式以及pdb相互转换</li>
+</ul>
+<hr>
+<h1 id="Umbrella-Sampling模拟与分析"><a href="#Umbrella-Sampling模拟与分析" class="headerlink" title="Umbrella Sampling模拟与分析"></a>Umbrella Sampling模拟与分析</h1><hr>
+<h2 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h2><p>沿某个预定义的“路径坐标”采样从而得到体系沿该路径变化对应的自由能变化（有平均力势得出；Potential Mean Force）</p>
+<p><font color=grey size=2>路径坐标的定义由研究的问题决定并定义了得到的数据的意义</font></p>
+<hr>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>将“路径坐标”划分为多个窗口，用势函数约束该窗口的坐标值进行采样（例如：简谐势）</p>
+<p>如果在采样后各窗口间采样得到的几何结构在“路径坐标”上有足够重叠，则可以使用WHAM方法去除“约束势函数”带来的bias从而得到自由能曲线</p>
+<hr>
+<h2 id="流程-1"><a href="#流程-1" class="headerlink" title="流程"></a>流程</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://ambermd.org/tutorials/advanced/tutorial17/index.php">官方教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://jerkwin.github.io/2018/04/26/AMBER%E9%AB%98%E7%BA%A7%E6%95%99%E7%A8%8BA17-%E4%BC%9E%E5%BD%A2%E9%87%87%E6%A0%B7%E5%AE%9E%E4%BE%8B-%E8%AE%A1%E7%AE%97%E4%B8%99%E6%B0%A8%E9%85%B8%E4%BA%8C%E8%82%BDPhi-Psi%E6%97%8B%E8%BD%AC%E8%BF%87%E7%A8%8B%E7%9A%84%E5%B9%B3%E5%9D%87%E5%8A%9B%E5%8A%BFPMF/">官方教程中文版</a></p>
+</blockquote>
+<hr>
+<h3 id="1-平衡初始结构"><a href="#1-平衡初始结构" class="headerlink" title="1. 平衡初始结构"></a>1. 平衡初始结构</h3><p>与一般的MD模拟相同，参数化并运行min heat equi等步骤</p>
+<hr>
+<h3 id="2-定义路径坐标"><a href="#2-定义路径坐标" class="headerlink" title="2. 定义路径坐标"></a>2. 定义路径坐标</h3><p>根据研究的问题定义路径坐标</p>
+<p>除明确的几何坐标如二面角之外也可以定义一些近似的路径例如<a target="_blank" rel="noopener" href="https://www.pnas.org/doi/10.1073/pnas.0409005102">用口袋氨基酸骨架质心与配体质心的距离角度等近似binding的路径坐标</a></p>
+<hr>
+<h3 id="3-选择Umbrella-Sampling的窗口"><a href="#3-选择Umbrella-Sampling的窗口" class="headerlink" title="3. 选择Umbrella Sampling的窗口"></a>3. 选择Umbrella Sampling的窗口</h3><p><strong>原则</strong></p>
+<ul>
+<li><p>窗口之间在路径坐标上必须重叠（这要求力常数不能太大，间隔不能太大）</p>
+</li>
+<li><p>窗口要尽可能少</p>
+</li>
+<li><p>使用简谐势的话 力常数（也就是约束强度）需要足够大来保证采样足够充分（如果路径的内禀势能非常大，例如断强键，力常数需要匹配地大从而保证每个窗口各不相同）</p>
+<p><font color=red size=2>如何先验地得到合适的力常数？</font></p>
+</li>
+</ul>
+<hr>
+<h3 id="4-在每个窗口进行MD模拟"><a href="#4-在每个窗口进行MD模拟" class="headerlink" title="4. 在每个窗口进行MD模拟"></a>4. 在每个窗口进行MD模拟</h3><p>以带几何约束的模拟相同，见<a href="#施加基于内坐标的constraint">施加基于内坐标的constraint</a></p>
+<p>每个窗口进行 min，equi，prod 模拟</p>
+<p>可以在.in文件中增加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&amp;wt</span><br><span class="line"> type&#x3D;&#39;DUMPFREQ&#39;, istep1&#x3D;50, # istep1 用于指定记录频率</span><br><span class="line">&amp;end</span><br></pre></td></tr></table></figure>
+<p>与</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DUMPAVE&#x3D;dihedral_60.dat</span><br></pre></td></tr></table></figure>
+<p>部分从而直接输出采样得到的constraint的值</p>
+<p>  <font color=gray size=2>貌似不进行heating了，不过heating本身的必要性也不明确 (<a target="_blank" rel="noopener" href="https://github.com/openmm/openmm/issues/4240">https://github.com/openmm/openmm/issues/4240</a>)</font></p>
+<hr>
+<p><strong>运行时长</strong></p>
+<p>需要模拟足够长时间从而保证该约束条件下的采样收敛</p>
+<p>理想情况下被约束的坐标自己往往涉及较大时间尺度的变化而其余的坐标可以在可接受的模拟时间尺度内收敛</p>
+<p>*官方教程建议采样完成后随机去除20%的数据再计算一次PMF来验证其收敛</p>
+<hr>
+<p><strong>初始结构</strong></p>
+<p>初始结构在路径坐标上的值不宜与约束的目标值相差太大（例如：初始结构为1A 约束在10A）</p>
+<p>但是也需要尽可能地平行提交计算任务</p>
+<p>常用的策略是手动创建一些中间点的初始结构之后从这些结构开始</p>
+<p>或者使顺序运行逐步改变初始结构</p>
+<hr>
+<p><strong>验证采样结果</strong></p>
+<p>可以做出采样结果在路径坐标上的histogram来判断设置是否有效</p>
+<ul>
+<li>重叠是否充分</li>
+<li>采样是否全面</li>
+</ul>
+<hr>
+<h3 id="5-用WHAM分析结果"><a href="#5-用WHAM分析结果" class="headerlink" title="5. 用WHAM分析结果"></a>5. 用WHAM分析结果</h3><blockquote>
+<p>使用 Alan Grossfield 开发的WHAM程序 </p>
+<p><a target="_blank" rel="noopener" href="http://membrane.urmc.rochester.edu/?page_id=126">http://membrane.urmc.rochester.edu/?page_id=126</a></p>
+</blockquote>
+<hr>
+<p><strong>5.1 安装WHAM</strong></p>
+<p>从Alan Grossfield的官网上下载源代码(<a target="_blank" rel="noopener" href="http://membrane.urmc.rochester.edu/?page_id=126/">http://membrane.urmc.rochester.edu/?page_id=126/</a>)</p>
+<p>参考manual安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tar -xvf wham-release-#####.tgz </span><br><span class="line">cd wham&#x2F;wham</span><br><span class="line">make clean</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+<p><font color=red size=2>注意截至2.0.11版本，WHAM的编译仍不支持GCC 10.2.0，调整环境至GCC 8.2.0方编译成功</font></p>
+<hr>
+<p><strong>5.2 运行WHAM</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;dir_of_wham&#125;&#x2F;wham [P|Ppi|Pval] hist_min hist_max num_bins tol temperature numpad metadatafile freefile [num_MC_trials randSeed]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>P|Ppi|Pval</code><br>指定反应坐标是周期性的（用于角度坐标）其中P指定360，Ppi指定2pi，Pval指定val的具体值（如P180.0）为一个周期</li>
+<li><code>hist_min</code> <code>hist_max</code><br>设置目标坐标的分布范围，所有范围外的点都被忽略</li>
+<li><code>num_bins</code><br>设置窗口数，对应最后自由能图上的点数</li>
+<li><code>tol</code><br>设置WHAM计算的收敛PMF阈值，单位为kcal/mol</li>
+<li><code>temperature</code><br>指定输入的采样数据对应的温度</li>
+<li><code>numpad</code><br>指定padding数据点的数量，对于周期性目标坐标起作用，该设置与非周期性目标坐标的计算无关</li>
+<li><code>metadatafile</code><br>指定输入的数据文件路径</li>
+<li><code>freefile</code><br>指定输出文件的路径</li>
+<li><code>num_MC_trials</code> <code>randSeed</code><br>如果指定，错误分析不进行，并使用Monte Carlop bootstrap 错误分析，分别指定fake data的数量和随机种子</li>
+</ul>
+<p>用例</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wham 14.3 35.7 84 0.01 300.0 0 meta.dat result.dat</span><br></pre></td></tr></table></figure>
+<p>其中meta.dat的格式为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;path&#x2F;to&#x2F;timeseries&#x2F;file loc_win_min spring [correl time] [temperature]</span><br></pre></td></tr></table></figure>
+<p>其中 </p>
+<ul>
+<li><code>/path/to/timeseries/file</code><br>为数据文件路径</li>
+<li><code>loc_win_min</code><br>为该窗口的势函数的极小值点</li>
+<li><code>spring</code><br>为<code>V = 0.5k(x-x0)^2</code>定义下的力常数</li>
+<li><code>correl time</code><br>只在Monte Carlop bootstrap 错误分析时使用指定该采样集合的相关时间</li>
+<li><code>temperature</code><br>如果指定覆盖命令行指定的温度</li>
+</ul>
+<hr>
+<p><strong>5.3 分析WHAM结果</strong></p>
+<p>WHAM的结果为坐标和自由能，直接作图分析</p>
+<hr>
+<h1 id="Misc-1"><a href="#Misc-1" class="headerlink" title="Misc"></a>Misc</h1><h2 id="tleap"><a href="#tleap" class="headerlink" title="tleap"></a>tleap</h2><p>tleap自动加氢甚至不会考虑周围的金属离子(如Zn2+等配位中心)，会把旁边的残基质子化而不考虑配位</p>
+<h2 id="prepin格式"><a href="#prepin格式" class="headerlink" title="prepin格式"></a>prepin格式</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://ambermd.org/doc/prep.html">https://ambermd.org/doc/prep.html</a><br>利用树和LOOP的方式描述连接</p>
+</blockquote>
+<h2 id="GPU在equi步报错"><a href="#GPU在equi步报错" class="headerlink" title="GPU在equi步报错"></a>GPU在equi步报错</h2><p>用solvatebox的话就会用solvateOct则不会</p>
+<h2 id="迷惑的内存错误"><a href="#迷惑的内存错误" class="headerlink" title="迷惑的内存错误"></a>迷惑的内存错误</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Error: an illegal memory access was encountered launching kernel kClearForces</span><br><span class="line">cudaMemcpy GpuBuffer::Download failed an illegal memory access was encountered</span><br></pre></td></tr></table></figure>
+<p>参考</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Litedg/article/details/124230876">https://blog.csdn.net/Litedg/article/details/124230876</a><br><a target="_blank" rel="noopener" href="http://archive.ambermd.org/202203/0149.html">http://archive.ambermd.org/202203/0149.html</a> 说了部分原理</p>
+</blockquote>
+<p>主要的原因：</p>
+<ul>
+<li>GPU相关的MD精度有限，在涉及巨大的数值的时候会出现该问题</li>
+<li>往往意味着结构中有bad contact从而存在巨大力</li>
+</ul>
+<p>解决方案：</p>
+<ul>
+<li>用CPU跑min步可以解决大部分问题</li>
+<li>有一次遇到CPU跑20000步min还遇到这个问题改成100000步就好了</li>
+</ul>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/chinese/">chinese</a><a class="link-muted mr-2" rel="tag" href="/tags/Amber/">Amber</a><a class="link-muted mr-2" rel="tag" href="/tags/MD/">MD</a><a class="link-muted mr-2" rel="tag" href="/tags/MMPBSA/">MMPBSA</a><a class="link-muted mr-2" rel="tag" href="/tags/MCPB/">MCPB</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=5ef9d9dddd16750013bd35dd&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/12/02/%E5%85%B3%E4%BA%8E%E5%8A%A8%E5%8A%9B%E4%B8%8E%E6%B3%A8%E6%84%8F%E8%BD%AC%E7%A7%BB%E7%9A%84%E5%81%87%E8%AE%BE/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">关于动力与注意转移的假设</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/11/12/PyMol-Structure-Amendment/"><span class="level-item">PyMol Structure Amendment</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="shaoqz"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">shaoqz</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">67</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">68</p></a></div></div></nav></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#MD模拟"><span class="level-left"><span class="level-item">1</span><span class="level-item">MD模拟</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#输入关键字"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">输入关键字</span></span></a></li><li><a class="level is-mobile" href="#施加基于内坐标的constraint"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">施加基于内坐标的constraint</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#NMR-restraint的方案"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">NMR restraint的方案</span></span></a></li></ul></li><li><a class="level is-mobile" href="#验证MD结果是否有效"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">验证MD结果是否有效</span></span></a></li><li><a class="level is-mobile" href="#关于提升GPU下的计算效率"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">关于提升GPU下的计算效率</span></span></a></li></ul></li><li><a class="level is-mobile" href="#MMPBSA-与-MMGBSA"><span class="level-left"><span class="level-item">2</span><span class="level-item">MMPBSA 与 MMGBSA</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#准备文件"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">准备文件</span></span></a></li><li><a class="level is-mobile" href="#运行"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">运行</span></span></a></li><li><a class="level is-mobile" href="#计算结果"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">计算结果</span></span></a></li><li><a class="level is-mobile" href="#MMPBSA中包含的熵"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">MMPBSA中包含的熵</span></span></a></li><li><a class="level is-mobile" href="#MMPBSA中的周期性边界条件"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">MMPBSA中的周期性边界条件</span></span></a></li><li><a class="level is-mobile" href="#关于各种选项"><span class="level-left"><span class="level-item">2.6</span><span class="level-item">关于各种选项</span></span></a></li></ul></li><li><a class="level is-mobile" href="#非标准残基的参数化"><span class="level-left"><span class="level-item">3</span><span class="level-item">非标准残基的参数化</span></span></a></li><li><a class="level is-mobile" href="#MCPB-py的使用"><span class="level-left"><span class="level-item">4</span><span class="level-item">MCPB.py的使用</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#目标"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">目标</span></span></a></li><li><a class="level is-mobile" href="#流程"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">流程</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#I-制作目标蛋白模型-preparation"><span class="level-left"><span class="level-item">4.2.1</span><span class="level-item">I. 制作目标蛋白模型(preparation)</span></span></a></li><li><a class="level is-mobile" href="#II-提取目标蛋白模型组件-mol2文件"><span class="level-left"><span class="level-item">4.2.2</span><span class="level-item">II. 提取目标蛋白模型组件(mol2文件)</span></span></a></li><li><a class="level is-mobile" href="#III-使用MCPB-py生成Gaussian输入文件"><span class="level-left"><span class="level-item">4.2.3</span><span class="level-item">III. 使用MCPB.py生成Gaussian输入文件</span></span></a></li><li><a class="level is-mobile" href="#IV-使用MCPB-py读取Gaussian输出文件并生成参数"><span class="level-left"><span class="level-item">4.2.4</span><span class="level-item">IV. 使用MCPB.py读取Gaussian输出文件并生成参数</span></span></a></li><li><a class="level is-mobile" href="#V-运行tleap-in完成参数化"><span class="level-left"><span class="level-item">4.2.5</span><span class="level-item">V. 运行tleap.in完成参数化</span></span></a></li><li><a class="level is-mobile" href="#V-1-（对于多聚体）修改pdb和tleap以适配其他金属中心"><span class="level-left"><span class="level-item">4.2.6</span><span class="level-item">V-1. （对于多聚体）修改pdb和tleap以适配其他金属中心</span></span></a></li><li><a class="level is-mobile" href="#V-2-（对于多个不同金属中心）修改pdb和tleap-in"><span class="level-left"><span class="level-item">4.2.7</span><span class="level-item">V-2. （对于多个不同金属中心）修改pdb和tleap.in</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Misc"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">Misc</span></span></a></li></ul></li><li><a class="level is-mobile" href="#轨线输出文件格式"><span class="level-left"><span class="level-item">5</span><span class="level-item">轨线输出文件格式</span></span></a></li><li><a class="level is-mobile" href="#Umbrella-Sampling模拟与分析"><span class="level-left"><span class="level-item">6</span><span class="level-item">Umbrella Sampling模拟与分析</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#目标-1"><span class="level-left"><span class="level-item">6.1</span><span class="level-item">目标</span></span></a></li><li><a class="level is-mobile" href="#原理"><span class="level-left"><span class="level-item">6.2</span><span class="level-item">原理</span></span></a></li><li><a class="level is-mobile" href="#流程-1"><span class="level-left"><span class="level-item">6.3</span><span class="level-item">流程</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1-平衡初始结构"><span class="level-left"><span class="level-item">6.3.1</span><span class="level-item">1. 平衡初始结构</span></span></a></li><li><a class="level is-mobile" href="#2-定义路径坐标"><span class="level-left"><span class="level-item">6.3.2</span><span class="level-item">2. 定义路径坐标</span></span></a></li><li><a class="level is-mobile" href="#3-选择Umbrella-Sampling的窗口"><span class="level-left"><span class="level-item">6.3.3</span><span class="level-item">3. 选择Umbrella Sampling的窗口</span></span></a></li><li><a class="level is-mobile" href="#4-在每个窗口进行MD模拟"><span class="level-left"><span class="level-item">6.3.4</span><span class="level-item">4. 在每个窗口进行MD模拟</span></span></a></li><li><a class="level is-mobile" href="#5-用WHAM分析结果"><span class="level-left"><span class="level-item">6.3.5</span><span class="level-item">5. 用WHAM分析结果</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#Misc-1"><span class="level-left"><span class="level-item">7</span><span class="level-item">Misc</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#tleap"><span class="level-left"><span class="level-item">7.1</span><span class="level-item">tleap</span></span></a></li><li><a class="level is-mobile" href="#prepin格式"><span class="level-left"><span class="level-item">7.2</span><span class="level-item">prepin格式</span></span></a></li><li><a class="level is-mobile" href="#GPU在equi步报错"><span class="level-left"><span class="level-item">7.3</span><span class="level-item">GPU在equi步报错</span></span></a></li><li><a class="level is-mobile" href="#迷惑的内存错误"><span class="level-left"><span class="level-item">7.4</span><span class="level-item">迷惑的内存错误</span></span></a></li></ul></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Notes/"><span class="level-start"><span class="level-item">Notes</span></span><span class="level-end"><span class="level-item tag">50</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Experiment/"><span class="level-start"><span class="level-item">Experiment</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Projects/"><span class="level-start"><span class="level-item">Projects</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Tools/"><span class="level-start"><span class="level-item">Tools</span></span><span class="level-end"><span class="level-item tag">26</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Tools/Support-File/"><span class="level-start"><span class="level-item">Support File</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/personal/"><span class="level-start"><span class="level-item">personal</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/"><span class="level-start"><span class="level-item">Refs</span></span><span class="level-end"><span class="level-item tag">15</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/Ambimodal/"><span class="level-start"><span class="level-item">Ambimodal</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Refs/Enzyme/"><span class="level-start"><span class="level-item">Enzyme</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/Enzyme/Enzyme-Interaction/"><span class="level-start"><span class="level-item">Enzyme Interaction</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/code-99/"><span class="level-start"><span class="level-item">code-99</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/code-99/M-class/"><span class="level-start"><span class="level-item">M-class</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/code-O/"><span class="level-start"><span class="level-item">code-O</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Tweets/"><span class="level-start"><span class="level-item">Tweets</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">SHAOQZ.CN</a><p class="is-size-7"><span>&copy; 2025 shaoqz</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Non Commerical" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="No Derivatives" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><i class="fab fa-creative-commons-nd"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
