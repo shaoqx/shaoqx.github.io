@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Progdyn2017的部署与使用 - NOTES and REFS</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="NOTES and REFS"><meta name="msapplication-TileImage" content="/img/avatar.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="NOTES and REFS"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本文介绍了Quasi-classical动力学软件Progdyn2017的安装，运行，监控以及数据分析(Chinese Version)"><meta property="og:type" content="blog"><meta property="og:title" content="Progdyn2017的部署与使用"><meta property="og:url" content="http://yoursite.com/2020/09/14/Progdyn2017%E7%9A%84%E9%83%A8%E7%BD%B2%E4%B8%8E%E4%BD%BF%E7%94%A8/"><meta property="og:site_name" content="NOTES and REFS"><meta property="og:description" content="本文介绍了Quasi-classical动力学软件Progdyn2017的安装，运行，监控以及数据分析(Chinese Version)"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/images/Gas-plots.png"><meta property="article:published_time" content="2020-09-14T21:12:40.000Z"><meta property="article:modified_time" content="2025-11-25T01:19:27.903Z"><meta property="article:author" content="shaoqz"><meta property="article:tag" content="chinese"><meta property="article:tag" content="Progdyn"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/images/Gas-plots.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2020/09/14/Progdyn2017%E7%9A%84%E9%83%A8%E7%BD%B2%E4%B8%8E%E4%BD%BF%E7%94%A8/"},"headline":"Progdyn2017的部署与使用","image":["http://yoursite.com/images/Gas-plots.png"],"datePublished":"2020-09-14T21:12:40.000Z","dateModified":"2025-11-25T01:19:27.903Z","author":{"@type":"Person","name":"shaoqz"},"publisher":{"@type":"Organization","name":"NOTES and REFS","logo":{"@type":"ImageObject","url":{"text":"SHAOQZ.CN"}}},"description":"本文介绍了Quasi-classical动力学软件Progdyn2017的安装，运行，监控以及数据分析(Chinese Version)"}</script><link rel="canonical" href="http://yoursite.com/2020/09/14/Progdyn2017%E7%9A%84%E9%83%A8%E7%BD%B2%E4%B8%8E%E4%BD%BF%E7%94%A8/"><link rel="icon" href="/img/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">SHAOQZ.CN</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/ref-rank">Paper Ranking</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/shaoqx"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/images/Gas-plots.png" alt="Progdyn2017的部署与使用"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-09-14T21:12:40.000Z" title="2020/9/14 16:12:40">2020-09-14</time></span><span class="level-item">Updated&nbsp;<time dateTime="2025-11-25T01:19:27.903Z" title="2025/11/24 19:19:27">2025-11-24</time></span><span class="level-item"><a class="link-muted" href="/categories/Notes/">Notes</a><span> / </span><a class="link-muted" href="/categories/Notes/Tools/">Tools</a></span><span class="level-item">15 minutes read (About 2184 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Progdyn2017的部署与使用</h1><div class="content"><p>本文介绍了Quasi-classical动力学软件Progdyn2017的安装，运行，监控以及数据分析(Chinese Version)</p>
+<span id="more"></span>
+<hr>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><hr>
+<ol>
+<li>将Progdyn文件夹放置在<code>~/bin/progdyn/progdyn_2017</code>路径下<ul>
+<li>如果放在其他位置，需要编辑 makedynjob 与 setup_dyn以适配自定义路径</li>
+<li>系统要求：Linux&#x2F;Unix</li>
+</ul>
+</li>
+<li>修改文件夹权限<code>chmod -R 755 ~/bin/progdyn/progdyn_2017</code></li>
+</ol>
+<blockquote>
+<p><strong>在其他服务器上的安装</strong></p>
+<ol>
+<li>修改<strong>progdynstarterHP</strong>中的55 56行 设置为本服务器加载Gaussian的方式</li>
+<li>修改<strong>makedynjob</strong> 130行之后的提交脚本部分 设置为本服务器的格式</li>
+</ol>
+</blockquote>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><hr>
+<p><font color=grey size=2>这里以Hoffman2的集成任务管理环境(SGE)为例</font></p>
+<ol>
+<li><p>建立项目文件夹<code>mkdir $Project</code></p>
+</li>
+<li><p>计算对象过渡态的HPmode频率(使用<code>freq=hpmodes</code>关键字)，将结果放置于项目文件夹中 <font color=red size=2>注意该计算不能使用nosymm</font></p>
+</li>
+<li><p>运行设置脚本 <code>sh ~/bin/progdyn/progdyn_2017/setup_dyn [gau_freq_calc.out] [directory]</code></p>
+<ul>
+<li>**[gau_freq_calc.out]**是过渡态频率文件</li>
+<li>**[directory]**是项目路径，如果是当前路径则可以简化为<code>.</code></li>
+<li>该过程会将频率文件改名并复制两个配置文件(<strong>proganal progdyn.conf</strong>)到项目路径</li>
+</ul>
+</li>
+<li><p>编辑配置文件</p>
+<p> <strong>progdyn.conf</strong> 常用设置</p>
+<ul>
+<li>设置需要的<strong>计算资源(核心数&#x2F;内存)</strong> <font color=grey size=2>该配置将体现在提交脚本和gaussian输入文件中</font>       </li>
+<li>设置使用的理论层级-method 溶剂化模型-method3 必要关键字-method4 <font color=grey size=2>体现在Gaussian输入文件中</font></li>
+<li>设置numimag <font color=grey size=2>对中间体采样的时候设置为0</font></li>
+<li>设置title <font color=grey size=2>体现为提交脚本中的任务标题 设置以在队列中方便查看</font></li>
+</ul>
+<p> <font color=red size=2>需要注意progdyn2017只支持到D2，不支持D3矫正</font></p>
+<p> <strong>proganal</strong> 常用设置<br> 设置终止条件（END{}部分）</p>
+<ul>
+<li>定义监控的键长：设置名称和值 更改printf中的对应关系（数量&#x2F;名称）</li>
+<li>设置单侧最大轨线时长</li>
+<li>设置终止键长限制 修改对应的终止信息</li>
+</ul>
+</li>
+<li><p>提交任务</p>
+<p>运行<code>sh ~/bin/progdyn/progdyn_2017/makedynjob</code></p>
+<ul>
+<li>设置同时运行的轨线数n</li>
+<li>决定是否现在提交 (如果此处选no之后可以在<strong>项目路径下</strong>手动提交<code>qsub ./n#/subdynjob.n#.job</code>)</li>
+</ul>
+</li>
+</ol>
+<h1 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h1><hr>
+<p>可以通过每个轨线文件夹中的dynfollowfile观察监控键长的变化<br>可以通过traj文件观察轨线（下载并改成.xyz）</p>
+<h1 id="维护"><a href="#维护" class="headerlink" title="维护"></a>维护</h1><hr>
+<p>Progdyn的每个轨线文件夹在跑完一条轨线后会<strong>自动开始下一条</strong><br>对于有限的任务时间，需要在任务结束后<strong>重新提交所有.job文件</strong>，Progdyn会<strong>自动继续</strong>所有轨线运算 <font color=red size=2>由于任务开始和结束的时间可能不同，需要注意一定不要重复提交&#x2F;运算同一个轨线任务</font> 我的Github上有我写过的一个自动提交跑完的部分轨线的脚本（只适用于Hoffman2）</p>
+<h1 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h1><hr>
+<h3 id="绘制轨线"><a href="#绘制轨线" class="headerlink" title="绘制轨线"></a>绘制轨线</h3><p><strong>使用progdyn附带的progdyn_utilities中的脚本</strong></p>
+<ol>
+<li><p>在项目路径下运行Script_gas.py</p>
+<ul>
+<li>将mv_traj.sh放在项目文件夹中</li>
+<li>输入前三个键长</li>
+</ul>
+</li>
+<li><p>新建目录TS <code>mkdir TS</code></p>
+</li>
+<li><p>将trajTS&#x2F;trajTS.xyz移动到TS&#x2F;cp.xyz <code>mv trajTS/trajTS.xyz TS/cp.xyz</code></p>
+</li>
+<li><p>在项目路径下运行Script_3D_trajdistribution.py</p>
+<ul>
+<li>输入四个键长（可以用一些无关的键长占位，例如：1,2）<br><strong>获取数据文件</strong></li>
+</ul>
+</li>
+<li><p>获取TS初始点的数据：trajTS&#x2F;trajTS.txt （由输入的四个键长描述的TS采样初结构）</p>
+</li>
+<li><p>获取轨线数据： TDD_r2p&#x2F;*.txt （由输入的四个键长描述的轨线）</p>
+<ul>
+<li>根据需要将数据整合成一个文件<code>cat * &gt; Trajs.txt</code></li>
+</ul>
+</li>
+<li><p>使用脚本对这些数据作图<br> 这里用我写的一个粗糙脚本(Progdyn_plot_sep.py)为例：<br> <font color=red size=2>搜索SEt字段以定位设置</font></p>
+<ul>
+<li>设置数据文件的路径 设置项目路径 设置输出路径（需要在文件里找）</li>
+<li>设置颜色（在ax.scatter函数中）</li>
+<li>根据采样结构的个数注释或使用TS，TS3，INT名称 （看后面的几段理解）</li>
+<li>增加轨线对象需要增加cutoff段</li>
+</ul>
+<p> 该脚本也可以在我的Github上找到:&#x2F;Progdyn2017_tool&#x2F;Plot&#x2F;Progdyn_plot_sep.py (目前还没有公开)</p>
+</li>
+</ol>
+<p><strong>使用Photoshop合并几个生成的图层</strong><br>由于matplotlib处理三维图像的前后关系有些bug所以刚才提到的脚本将每个图层分别保存之后在ps中整合</p>
+<hr>
+<h3 id="分析轨线分布"><a href="#分析轨线分布" class="headerlink" title="分析轨线分布"></a>分析轨线分布</h3><p><strong>使用progdyn附带的progdyn_utilities中的脚本</strong><br>只使用Script_gas.py<br>（细节同上）</p>
+<p><strong>reorder所有轨线</strong><br>将ntraj文件夹中的所有轨线调整为 反应物 –&gt; TS –&gt; 产物 的顺序 (reorder)<br>我在&#x2F;Progdyn2017_tool&#x2F;Analysis&#x2F;FromDennis中放置了来自Dennis Svatunek(github.com&#x2F;dsvatunek)的reorder.py脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for i in *.xyz;do python ~/bin/reorder.py $i;done</span><br></pre></td></tr></table></figure>
+
+<p><strong>将处理过的轨线分类并分析成键间隔</strong><br>将reorder后的轨线按照 通向反应物，中间体，反应物1，反应物2, … 分类</p>
+<p>我在&#x2F;Progdyn2017_tool&#x2F;Analysis有相关脚本Pos_reorder.py</p>
+<ul>
+<li>设置键和成键键长（用于判断成键间隔）</li>
+<li>设置判断终点的键长（考虑到振动，要比平衡态键长稍长）</li>
+<li>在包含所有轨线的目标路径<strong>直接运行</strong></li>
+</ul>
+<h3 id="制作轨线动画"><a href="#制作轨线动画" class="headerlink" title="制作轨线动画"></a>制作轨线动画</h3><p>在PyMol中载入.xyz文件<br>动态成键 参考：<a target="_blank" rel="noopener" href="https://sourceforge.net/p/pymol/mailman/pymol-users/thread/c21f86160912141012r62e0fdfaw223a453b0d394816%40mail.gmail.com/#msg24186034">https://sourceforge.net/p/pymol/mailman/pymol-users/thread/c21f86160912141012r62e0fdfaw223a453b0d394816%40mail.gmail.com/#msg24186034</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">load ntraj2.xyz, multiplex=1</span><br><span class="line">join_states multifoo, *, 0</span><br></pre></td></tr></table></figure>
+<p>直接独立载入之后（自动判断成键），合并</p>
+<h3 id="结构的简谐分布区域分析"><a href="#结构的简谐分布区域分析" class="headerlink" title="结构的简谐分布区域分析"></a>结构的简谐分布区域分析</h3><p>在实际的体系中不同的中间体、过渡态不以稳定点的固定结构存在，而是体现为在稳定点附近的基于振动熵最大化的<strong>分布</strong><br>Progdyn中可以通过进行normal mode sampling得到这个分布的采样 从而可以被表征为一个<strong>区域</strong><br>通过对该区域的<strong>数学定义</strong>可以分析轨线在该区域的行为（是否经过，停留时间, etc）</p>
+<ul>
+<li>采样区域的数学定义<br> normal mode sampling得到的一组结构往往被体现为在几个关键键长上的分布 （例如：ambimodal中的2nd竞争键）<br> 在这种情况下体现为在一个2d面上的采样，并且由于这两个键的运动往往耦合所以分布体现为有一定相关性的斜椭圆（如果完全独立则为高斯正圆）<br> <strong>数学定义</strong><br> 通过一个区域拟合该结构可能的分布 – 一定置信度下包含全部可能的采样点 – 置信椭圆<br> 根据采样点的置信椭圆的求解可以通过<a target="_blank" rel="noopener" href="https://carstenschelp.github.io/2018/09/14/Plot_Confidence_Ellipse_001.html">Pearson相关系数法得出</a><br> 通过解得的椭圆方程(不等式)可以判断一个点是否在椭圆内</li>
+<li>进行区域分析<br> 对单条轨线可以得到停留时间<br> 对多条轨线可以得到平均停留时间，经过区域的轨线比例<br> 相关脚本：<a target="_blank" rel="noopener" href="https://github.com/shaoqx/CalcKit/blob/master/Progdyn2017_tool/Analysis/Region_analysis.py">https://github.com/shaoqx/CalcKit/blob/master/Progdyn2017_tool/Analysis/Region_analysis.py</a></li>
+<li>采样区域作图<br> 可以通过<a target="_blank" rel="noopener" href="https://matplotlib.org/devdocs/gallery/statistics/confidence_ellipse.html">matplotlib对椭圆进行作图</a>之后用ps叠加在轨线上<br> 相关脚本：<a target="_blank" rel="noopener" href="https://github.com/shaoqx/CalcKit/blob/master/Progdyn2017_tool/Plot/sample/Progdyn_plot_sep.py">https://github.com/shaoqx/CalcKit/blob/master/Progdyn2017_tool/Plot/sample/Progdyn_plot_sep.py</a></li>
+</ul>
+<h1 id="使用xtb方法"><a href="#使用xtb方法" class="headerlink" title="使用xtb方法"></a>使用xtb方法</h1><p><font color=grey size=2>通过Gaussian的external接口调用外部程序xtb完成力的计算</font></p>
+<blockquote>
+<p>基于gau_xtb程序<br><a target="_blank" rel="noopener" href="http://sobereva.com/soft/gau_xtb/">http://sobereva.com/soft/gau_xtb/</a></p>
+</blockquote>
+<h2 id="1-安装xtb"><a href="#1-安装xtb" class="headerlink" title="1. 安装xtb"></a>1. 安装xtb</h2><p><a target="_blank" rel="noopener" href="https://xtb-docs.readthedocs.io/en/latest/contents.html">https://xtb-docs.readthedocs.io/en/latest/contents.html</a></p>
+<h2 id="2-下载使用gau-xtb程序"><a href="#2-下载使用gau-xtb程序" class="headerlink" title="2. 下载使用gau_xtb程序"></a>2. 下载使用gau_xtb程序</h2><ul>
+<li>修改  <code>xtb.sh</code>  设置xtb的运行参数<br> 核数: <code>OMP_NUM_THREADS</code> 和 <code>MKL_NUM_THREADS</code><br> 溶剂: <code>--gbas</code>后的溶剂名</li>
+<li>将  <code>genxyz</code> <code>extderi</code> <code>xtb.sh</code>  移动至项目文件夹</li>
+<li>调整权限 <code>chmod 755 genxyz extderi xtb.sh</code></li>
+</ul>
+<h2 id="3-部署Progdyn"><a href="#3-部署Progdyn" class="headerlink" title="3. 部署Progdyn"></a>3. 部署Progdyn</h2><p>   <strong>freqinHP</strong>变化：</p>
+<ul>
+<li>过渡态和HPmodes也必须是在xtb层级下计算的否则会一直<strong>采样失败</strong><br><font color=grey size=2>在hof2上可以通过subg16c418x完成计算:提供gjf和xtb.sh</font><br>   <strong>progdyn.conf</strong>额外修改:</li>
+<li>核数设置为 <strong>1</strong> 防止高斯并行</li>
+<li>计算方法 设置为external&#x3D;’.&#x2F;xtb.sh’</li>
+<li>溶剂 删除高斯的溶剂(直接注释掉method)</li>
+</ul>
+<h2 id="4-部署后修改"><a href="#4-部署后修改" class="headerlink" title="4. 部署后修改"></a>4. 部署后修改</h2><p>   <strong>subdynjob.nX.job</strong>：</p>
+<ul>
+<li>修改核数至与xtb中一致，如：<br>   <code>for i in n*;do sed -i &#39;s/shared* 1/shared* 4/&#39; $i/subdynjob.$i.job;done</code></li>
+<li>增加xtb的初始化,例如： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/bin/XTB/Config_xtb_env.bash</span><br></pre></td></tr></table></figure></li>
+<li>移动gau_xtb组件至高斯运行路径 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cp xtb.sh extderi genxyz $scratch</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>   可以通过脚本批量修改<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for i in n*;do sed -i &#x27;24a source ~/bin/XTB/Config_xtb_env.bash\</span><br><span class="line">cp xtb.sh extderi genxyz $scratch&#x27; $i/subdynjob.$i.job;done </span><br></pre></td></tr></table></figure><br>最后正常提交.job</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/chinese/">chinese</a><a class="link-muted mr-2" rel="tag" href="/tags/Progdyn/">Progdyn</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=5ef9d9dddd16750013bd35dd&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/10/17/RefNote-Experimental-Thermodynamic-data-of-Enzyme-Interaction/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">RefNote: Experimental Thermodynamic data of Enzyme Interaction</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/09/04/Fixed-Thread/"><span class="level-item">Fixed Thread</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="shaoqz"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">shaoqz</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">67</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">68</p></a></div></div></nav></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#安装"><span class="level-left"><span class="level-item">1</span><span class="level-item">安装</span></span></a></li><li><a class="level is-mobile" href="#运行"><span class="level-left"><span class="level-item">2</span><span class="level-item">运行</span></span></a></li><li><a class="level is-mobile" href="#监控"><span class="level-left"><span class="level-item">3</span><span class="level-item">监控</span></span></a></li><li><a class="level is-mobile" href="#维护"><span class="level-left"><span class="level-item">4</span><span class="level-item">维护</span></span></a></li><li><a class="level is-mobile" href="#数据分析"><span class="level-left"><span class="level-item">5</span><span class="level-item">数据分析</span></span></a><ul class="menu-list"><ul class="menu-list"><li><a class="level is-mobile" href="#绘制轨线"><span class="level-left"><span class="level-item">5.1.1</span><span class="level-item">绘制轨线</span></span></a></li><li><a class="level is-mobile" href="#分析轨线分布"><span class="level-left"><span class="level-item">5.1.2</span><span class="level-item">分析轨线分布</span></span></a></li><li><a class="level is-mobile" href="#制作轨线动画"><span class="level-left"><span class="level-item">5.1.3</span><span class="level-item">制作轨线动画</span></span></a></li><li><a class="level is-mobile" href="#结构的简谐分布区域分析"><span class="level-left"><span class="level-item">5.1.4</span><span class="level-item">结构的简谐分布区域分析</span></span></a></li></ul></ul></li><li><a class="level is-mobile" href="#使用xtb方法"><span class="level-left"><span class="level-item">6</span><span class="level-item">使用xtb方法</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1-安装xtb"><span class="level-left"><span class="level-item">6.1</span><span class="level-item">1. 安装xtb</span></span></a></li><li><a class="level is-mobile" href="#2-下载使用gau-xtb程序"><span class="level-left"><span class="level-item">6.2</span><span class="level-item">2. 下载使用gau_xtb程序</span></span></a></li><li><a class="level is-mobile" href="#3-部署Progdyn"><span class="level-left"><span class="level-item">6.3</span><span class="level-item">3. 部署Progdyn</span></span></a></li><li><a class="level is-mobile" href="#4-部署后修改"><span class="level-left"><span class="level-item">6.4</span><span class="level-item">4. 部署后修改</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Notes/"><span class="level-start"><span class="level-item">Notes</span></span><span class="level-end"><span class="level-item tag">50</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Experiment/"><span class="level-start"><span class="level-item">Experiment</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Projects/"><span class="level-start"><span class="level-item">Projects</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Tools/"><span class="level-start"><span class="level-item">Tools</span></span><span class="level-end"><span class="level-item tag">26</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Tools/Support-File/"><span class="level-start"><span class="level-item">Support File</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/personal/"><span class="level-start"><span class="level-item">personal</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/"><span class="level-start"><span class="level-item">Refs</span></span><span class="level-end"><span class="level-item tag">15</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/Ambimodal/"><span class="level-start"><span class="level-item">Ambimodal</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Refs/Enzyme/"><span class="level-start"><span class="level-item">Enzyme</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/Enzyme/Enzyme-Interaction/"><span class="level-start"><span class="level-item">Enzyme Interaction</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/code-99/"><span class="level-start"><span class="level-item">code-99</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/code-99/M-class/"><span class="level-start"><span class="level-item">M-class</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/code-O/"><span class="level-start"><span class="level-item">code-O</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Tweets/"><span class="level-start"><span class="level-item">Tweets</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">SHAOQZ.CN</a><p class="is-size-7"><span>&copy; 2026 shaoqz</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Non Commerical" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="No Derivatives" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><i class="fab fa-creative-commons-nd"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

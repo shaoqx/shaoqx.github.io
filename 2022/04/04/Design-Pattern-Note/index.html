@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Design Pattern Note - NOTES and REFS</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="NOTES and REFS"><meta name="msapplication-TileImage" content="/img/avatar.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="NOTES and REFS"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="关于软件设计模式的笔记，思考未来和学生合作软件开发时的定位总结关于设计模式的一般原则"><meta property="og:type" content="blog"><meta property="og:title" content="Design Pattern Note"><meta property="og:url" content="http://yoursite.com/2022/04/04/Design-Pattern-Note/"><meta property="og:site_name" content="NOTES and REFS"><meta property="og:description" content="关于软件设计模式的笔记，思考未来和学生合作软件开发时的定位总结关于设计模式的一般原则"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2022-04-04T22:54:18.000Z"><meta property="article:modified_time" content="2025-11-25T01:19:27.896Z"><meta property="article:author" content="shaoqz"><meta property="article:tag" content="chinese"><meta property="article:tag" content="personal"><meta property="article:tag" content="Python"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2022/04/04/Design-Pattern-Note/"},"headline":"Design Pattern Note","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2022-04-04T22:54:18.000Z","dateModified":"2025-11-25T01:19:27.896Z","author":{"@type":"Person","name":"shaoqz"},"publisher":{"@type":"Organization","name":"NOTES and REFS","logo":{"@type":"ImageObject","url":{"text":"SHAOQZ.CN"}}},"description":"关于软件设计模式的笔记，思考未来和学生合作软件开发时的定位总结关于设计模式的一般原则"}</script><link rel="canonical" href="http://yoursite.com/2022/04/04/Design-Pattern-Note/"><link rel="icon" href="/img/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">SHAOQZ.CN</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/ref-rank">Paper Ranking</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/shaoqx"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-04-04T22:54:18.000Z" title="2022/4/4 17:54:18">2022-04-04</time></span><span class="level-item">Updated&nbsp;<time dateTime="2025-11-25T01:19:27.896Z" title="2025/11/24 19:19:27">2025-11-24</time></span><span class="level-item"><a class="link-muted" href="/categories/Notes/">Notes</a></span><span class="level-item">2 minutes read (About 332 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Design Pattern Note</h1><div class="content"><p>关于软件设计模式的笔记，思考未来和学生合作软件开发时的定位<br>总结关于设计模式的一般原则</p>
+<span id="more"></span>
+<hr>
+<h1 id="一般原则"><a href="#一般原则" class="headerlink" title="一般原则"></a>一般原则</h1><p>软件设计中的普适规则，旨在提高可拓展性，可读性，面对不同输入的可靠性</p>
+<h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><p>在扩展新的类时，尽量不要修改原有代码</p>
+<h1 id="语言细节原则"><a href="#语言细节原则" class="headerlink" title="语言细节原则"></a>语言细节原则</h1><h3 id="init-构造器"><a href="#init-构造器" class="headerlink" title="__init__构造器"></a>__init__构造器</h3><ul>
+<li>在构造器中进行尽可能少的操作，从而提高程序的模块化程度和代码的可复用性（工厂方法)</li>
+<li>需要在构造器中初始化<strong>所有</strong>实例生命周期中涉及的属性</li>
+</ul>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h2><p>就只是把类的构造函数放在别的地方写（即在另一处提供接口）<br>一个简单的判断方式：假如构造方法的参数多种多样（超过五个甚至十个不同的构造方法），或者构造时在“参数赋值”这一步有过多的业务逻辑，就可以考虑写一个工厂类来做这部分逻辑，让那个类本身保持纯粹<br>在开发的时候也防止构造方法改坏了影响运行部分的业务</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/chinese/">chinese</a><a class="link-muted mr-2" rel="tag" href="/tags/personal/">personal</a><a class="link-muted mr-2" rel="tag" href="/tags/Python/">Python</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=5ef9d9dddd16750013bd35dd&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/04/25/%E8%AE%BAACCRE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E7%BD%AA/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">论ACCRE为什么有罪</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/02/25/pyGSM-Notes/"><span class="level-item">pyGSM Notes</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="shaoqz"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">shaoqz</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">67</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">68</p></a></div></div></nav></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#一般原则"><span class="level-left"><span class="level-item">1</span><span class="level-item">一般原则</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#开闭原则"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">开闭原则</span></span></a></li></ul></li><li><a class="level is-mobile" href="#语言细节原则"><span class="level-left"><span class="level-item">2</span><span class="level-item">语言细节原则</span></span></a><ul class="menu-list"><ul class="menu-list"><li><a class="level is-mobile" href="#init-构造器"><span class="level-left"><span class="level-item">2.1.1</span><span class="level-item">__init__构造器</span></span></a></li></ul></ul></li><li><a class="level is-mobile" href="#设计模式"><span class="level-left"><span class="level-item">3</span><span class="level-item">设计模式</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#工厂方法"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">工厂方法</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Notes/"><span class="level-start"><span class="level-item">Notes</span></span><span class="level-end"><span class="level-item tag">50</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Experiment/"><span class="level-start"><span class="level-item">Experiment</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Projects/"><span class="level-start"><span class="level-item">Projects</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Tools/"><span class="level-start"><span class="level-item">Tools</span></span><span class="level-end"><span class="level-item tag">26</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Tools/Support-File/"><span class="level-start"><span class="level-item">Support File</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/personal/"><span class="level-start"><span class="level-item">personal</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/"><span class="level-start"><span class="level-item">Refs</span></span><span class="level-end"><span class="level-item tag">15</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/Ambimodal/"><span class="level-start"><span class="level-item">Ambimodal</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Refs/Enzyme/"><span class="level-start"><span class="level-item">Enzyme</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/Enzyme/Enzyme-Interaction/"><span class="level-start"><span class="level-item">Enzyme Interaction</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/code-99/"><span class="level-start"><span class="level-item">code-99</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul><li><a class="level is-mobile" href="/categories/Refs/code-99/M-class/"><span class="level-start"><span class="level-item">M-class</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Refs/code-O/"><span class="level-start"><span class="level-item">code-O</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Tweets/"><span class="level-start"><span class="level-item">Tweets</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">SHAOQZ.CN</a><p class="is-size-7"><span>&copy; 2026 shaoqz</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Non Commerical" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="No Derivatives" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><i class="fab fa-creative-commons-nd"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
